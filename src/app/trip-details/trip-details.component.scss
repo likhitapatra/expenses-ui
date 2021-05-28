@@ -1,0 +1,29 @@
+@import url("../app.component.scss");
+
+.mat-card-style {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.card-width {
+  width: 30%;
+}
+.mat-card-header {
+  background-color: yellowgreen !important;
+  padding: 5px !important;
+}
+
+.mat-card {
+  padding: 0 !important;
+}
+
+.mat-card-content {
+  padding: 5px !important;
+}
+
+mat-card-header {
+  justify-content: center;
+  text-align: center;
+}

@@ -1,0 +1,26 @@
+<div class="mat-card-style" *ngIf="tripExpenses > 0">
+  <mat-card class="card-width">
+    <mat-card-header>
+      <mat-card-title>Details</mat-card-title>
+      <mat-card-subtitle
+        >Trip expenses {{ tripExpenses | currency }}</mat-card-subtitle
+      >
+    </mat-card-header>
+
+    <mat-card-content>
+      <mat-list role="list">
+        <mat-list-item *ngFor="let item of totals" role="listitem">
+          {{ item.name }} paid {{ item.total | currency }}</mat-list-item
+        >
+      </mat-list>
+      <mat-list role="list">
+        <mat-list-item *ngFor="let item of result" role="listitem">
+          <div *ngIf="item.total > 0">
+            {{ item.name }} owes {{ item.total | currency }} to
+            {{ person.name }}
+          </div></mat-list-item
+        >
+      </mat-list>
+    </mat-card-content>
+  </mat-card>
+</div>
